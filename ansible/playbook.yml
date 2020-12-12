@@ -1,0 +1,16 @@
+---
+host: win
+gather_facts: no
+tasks:
+    - name: Manage package 
+      win_chocolatey:
+        name: "{{ item }}"
+        state: present
+      loops:
+        - chrome-remote-desktop-chrome
+        - googlechrome
+        - slack
+        - skype
+        - 7zip.install
+        - telegram
+        - office365business 
